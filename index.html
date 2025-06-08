@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forward Beauty</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@100;200;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- ☰ -->
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#home">HOME</a></li>
+        <li><a href="https://book.squareup.com/appointments/37n42pv4h7xych/location/LKRBT6M0X0ZH4/services" target="_blank">BOOK</a></li>
+        <li><a href="aboutme.html">ABOUT ME</a></li>
+        <li><a href="#blog">BLOG</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  
+  
+  <div class="container">
+    <section class="slide" id="home">
+      <div class="hero-overlay">
+        <div class="content">
+          <h1>Forward Beauty</h1>
+        </div>
+        <a href="https://book.squareup.com/appointments/37n42pv4h7xych/location/LKRBT6M0X0ZH4/services" target="_blank", class="btn">Book Now</a>
+  
+        
+      </div>
+    </section>
+
+
+
+    <section class="slide" id="library1">
+      <div class="content">
+        <h2>Hair Library</h2>
+        <div class="gallery">
+      
+          <div class="card">
+            <img src="images/highlights1.jpg" alt="Highlights" />
+            <a href="highlights.html" class="label">HIGHLIGHTS</a>
+          </div>
+
+          <div class="card">
+            <img src="images/mens1.png" alt="Mens Cuts" />
+            <a href="menscuts.html" class="label">MENS CUTS</a>
+          </div>
+
+          <div class="card">
+            <img src="images/vivids1.jpg" alt="Vivids" />
+            <a href="vivids.html" class="label">VIVIDS</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="slide desktop-only" id="library1">
+      <div class="content">
+        <h2>Hair Library</h2>
+        <div class="gallery">
+      
+          <div class="card">
+            <img src="images/livedincolor1.jpg" alt="lived in color" />
+            <a href="livedincolor.html" class="label">LIVED IN COLOR</a>
+          </div>
+
+          <div class="card">
+            <img src="images/extensions1.jpg" alt="extensions" />
+            <a href="extensions.html" class="label">EXTENSIONS</a>
+          </div>
+
+          <div class="card">
+            <img src="images/greyblending1.png" alt="grey blending" />
+            <a href="greyblending.html" class="label">GREY BLENDING</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="slide" id="products">
+      <div class="products-layout">
+    
+        <div class="products-text">
+          <h2>Products I Use</h2>
+          <p>Instant hair rejuvenation by Amika and IGK</p>
+        </div>
+
+        <div class="product">
+          <img src="images/shampoo.png" alt="Shampoo" />
+          <h3>SHAMPOO</h3>
+        </div>
+        <div class="product">
+          <img src="images/conditioner.png" alt="Conditioner" />
+          <h3>CONDITIONER</h3>
+        </div>
+        <div class="product">
+          <img src="images/styling.png" alt="Styling" />
+          <h3>STYLING</h3>
+        </div>
+        
+
+      </div>
+    </section>
+
+    <section class="slide" id="footer">
+      <div class="content">
+        <h2>Contact Info</h2>
+        <p>Phone: (555) 123-4567</p>
+        <p>Instagram: @forwardbeauty</p>
+        <p>Email: forwardbeauty@email.com</p>
+      </div>
+    </section>
+  </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+
+            navLinks.querySelectorAll("a").forEach(link => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("active");
+            });
+          });
+        });
+    </script>
+
+  <script src="java.js"></script>
+  
+</body>
+</html>
+  

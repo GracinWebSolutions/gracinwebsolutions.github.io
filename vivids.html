@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forward Beauty Vivids</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body style="background-color: #FAF9F6;">
+
+    <nav class="navbar dark">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- ☰ icon -->
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="https://book.squareup.com/appointments/37n42pv4h7xych/location/LKRBT6M0X0ZH4/services" target="_blank">BOOK</a></li>
+            <li><a href="aboutme.html">ABOUT ME</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="index.html?goto=footer">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="brand-text">
+
+        <h1>Forward Beauty</h1>
+
+    </div>
+
+    <section class="extensions">
+        <div class="extensions-description">
+            <h2>Vivids</h2>
+            <p>
+                I provide vivid color services for those who want to make a bold statement with their hair. From bright, all-over color to creative blends and unique shades, I work with you to bring your vision to life while keeping your hair healthy and vibrant.
+            </p>
+        </div>
+
+        <div class="slideshow">
+            <img src="images/vivids1.jpg" class="extension-slide active" alt="vivids 1" />
+            <img src="images/vivids2.jpg" class="extension-slide" alt="vivids 2" />
+            <img src="images/vivids3.jpg" class="extension-slide" alt="vivids 3" />
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+
+    <script>
+        const extensionSlides = document.querySelectorAll(".extension-slide");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        function showExtensionSlide(index) {
+            extensionSlides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                slide.style.zIndex = i === index ? "1" : "0";
+            });
+            extensionSlides[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % extensionSlides.length;
+            showExtensionSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + extensionSlides.length) % extensionSlides.length;
+            showExtensionSlide(currentIndex);
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            resetAutoPlay();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+
+        showExtensionSlide(currentIndex);
+        startAutoPlay();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+        });
+    </script>
+
+
+</body>
+  

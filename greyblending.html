@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forward Beauty Grey Blending</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  
+  
+  
+    <div class="brand-text">
+
+        <h1>Forward Beauty</h1>
+
+    </div>
+  
+    <nav class="navbar dark">
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div> <!-- ☰ icon -->
+        <ul id="nav-links" class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="https://book.squareup.com/appointments/37n42pv4h7xych/location/LKRBT6M0X0ZH4/services" target="_blank">BOOK</a></li>
+            <li><a href="aboutme.html">ABOUT ME</a></li>
+            <li><a href="#blog">BLOG</a></li>
+            <li><a href="index.html?goto=footer">CONTACT</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="extensions">
+        <div class="extensions-description">
+            <h2>Grey Blending</h2>
+            <p>
+                I offer grey blending services that soften and mix natural greys for a more subtle, refreshed look. Whether you want to maintain a natural appearance or gradually transition, I create a seamless blend that’s low-maintenance and flattering.
+            </p>
+        </div>
+
+        <div class="slideshow">
+            <img src="images/greyblending1.png" class="extension-slide active" alt="grey blending 1" />
+            <img src="images/greyblending2.jpg" class="extension-slide" alt="grey blending 2" />
+            <img src="images/greyblending3.jpg" class="extension-slide" alt="grey blending 3" />
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+
+
+    <script>
+        const extensionSlides = document.querySelectorAll(".extension-slide");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
+        let currentIndex = 0;
+        let autoPlayInterval;
+
+        function showExtensionSlide(index) {
+            extensionSlides.forEach((slide, i) => {
+                slide.classList.remove("active");
+                slide.style.zIndex = i === index ? "1" : "0";
+            });
+            extensionSlides[index].classList.add("active");
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % extensionSlides.length;
+            showExtensionSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + extensionSlides.length) % extensionSlides.length;
+            showExtensionSlide(currentIndex);
+        }
+
+        function startAutoPlay() {
+            autoPlayInterval = setInterval(nextSlide, 4000);
+        }
+
+        function resetAutoPlay() {
+            clearInterval(autoPlayInterval);
+            startAutoPlay();
+        }
+
+        nextBtn.addEventListener("click", () => {
+            nextSlide();
+            resetAutoPlay();
+        });
+
+        prevBtn.addEventListener("click", () => {
+            prevSlide();
+            resetAutoPlay();
+        });
+
+        showExtensionSlide(currentIndex);
+        startAutoPlay();
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById("menu-toggle");
+            const navLinks = document.getElementById("nav-links");
+
+            toggle.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+            });
+
+            // Auto-close on link click (mobile)
+            navLinks.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("active");
+            });
+            });
+        });
+    </script>
+
+
+</body>
