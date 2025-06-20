@@ -20,6 +20,8 @@ h1, h2, h3, h4, h5, h6, p {
   padding-top: 0;
 }
 
+
+
 .navbar {
   display: flex;
   justify-content: flex-end; /* pushes content to the right */
@@ -869,7 +871,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
   .product img {
-    width: 125px;
+    width: 95px;
     height: auto;
   }
   h3 {
@@ -884,7 +886,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
   .extensions {
-    flex-direction: column;          /* stack vertically */
+    flex-direction: column;         
     align-items: center;
     justify-content: center;
     text-align: center;
