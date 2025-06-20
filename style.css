@@ -298,9 +298,9 @@ h1, h2, h3, h4, h5, h6, p {
   margin-top: 10px;
 }
 
-.about-text h1 {
+.about-text h2 {
   font-size: 2rem; /* Slightly smaller */
-  margin-bottom: 20px;
+  margin-top: 100px;
 }
 
 .about-text p {
@@ -430,6 +430,10 @@ h1, h2, h3, h4, h5, h6, p {
     margin: 0;
     padding: 0;
     height: 100%;
+  }
+
+  .navbar.dark li a{
+    color: white;
   }
 
   .container {
@@ -835,6 +839,10 @@ h1, h2, h3, h4, h5, h6, p {
   .next {
     right: -35px;
   }
+
+  .navbar.dark li a{
+    color: white;
+  }
   }
 
 
@@ -1003,7 +1011,7 @@ h1, h2, h3, h4, h5, h6, p {
 
   .about-text h2 {
     font-size: 1.8rem;
-    margin-bottom: 10px;
+    margin-top: 0px;
   }
 
   .about-text p {
@@ -1013,7 +1021,8 @@ h1, h2, h3, h4, h5, h6, p {
 
   .about-image {
     max-width: 200px;
-    margin: 20px auto;
+    margin:20px auto;
+    margin-top: 50px;
   }
 
   .about-image img{
