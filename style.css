@@ -575,7 +575,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 }
 
-@media screen and (orientation: landscape), (max-height: 500px) {
+@media (max-height: 500px) {
   .slide {
     min-height: auto;
     height: auto;
@@ -869,7 +869,7 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
   .product img {
-    width: 167px;
+    width: 125px;
     height: auto;
   }
   h3 {
@@ -1016,6 +1016,10 @@ h1, h2, h3, h4, h5, h6, p {
 
   .about-image img{
     width: 200px;
+  }
+
+  .btn{
+    margin-bottom: 100px;
   }
 
 }
