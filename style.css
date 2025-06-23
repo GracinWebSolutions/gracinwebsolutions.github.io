@@ -165,6 +165,15 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 20px;
 }
 
+.map-link{
+  color: inherit;
+  text-decoration: underline;
+  font-family: 'Spectral', serif;
+}
+
+.map-link:hover {
+  color: #fbbac9;
+}
 
 #products{
   background-color: #FAF9F6;
